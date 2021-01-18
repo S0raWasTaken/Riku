@@ -1,0 +1,9 @@
+exports.run = (tweet, args, client) => {
+	
+};
+
+exports.aliases = [];
+
+exports.help = (cmd) => {
+	if (this.aliases.find(a == cmd)) return true;
+};
