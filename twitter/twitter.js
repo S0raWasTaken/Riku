@@ -1,8 +1,11 @@
-const {safeLoad} = require("js-yaml");
-const {readFileSync, readdirSync} = require("fs");
-const keys = safeLoad(readFileSync("./twitter/config.yml"));
+const {readdirSync} = require("fs");
+const keys = {
+    consumer_key:process.env.CONSUMER_KEY,
+    consumer_key_secret:process.env.CONSUMER_KEY_SECRET,
+    access_token:process.env.ACCESS_TOKEN,
+    access_token_secret:proccess.env.ACCESS_TOKEN_SECRET
+}
 const twit = require("twit");
-const maps = require("./maps.js");
 const {dateNow} = require("../handlers.js");
 
 const Twitter = new twit(keys);

@@ -3,11 +3,10 @@ const { Manager } = require("erela.js");
 const client = new Client();
 const fs = require('fs');
 const { safeLoad, safeDump } = require('js-yaml');
-const { token } = safeLoad(fs.readFileSync("./conf.yml", "utf8"));
 const maps = require("./maps.js").maps;
 const {dateNow} = require("../handlers");
 
-client.login(token);
+client.login(process.env.R0XAS_TOKEN);
 
 client.manager = new Manager({
     nodes: [
