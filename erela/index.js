@@ -11,9 +11,9 @@ client.login(process.env.R0XAS_TOKEN);
 client.manager = new Manager({
     nodes: [
         {
-            host: "ip-51-81-52-107.losthost.com.br",
-            port: 32565,
-            password: "LbVRSfjs5LnWQnA3",
+            host: process.env.LAVA_HOST,
+            port: process.env.LAVA_PORT,
+            password: process.env.LAVA_PASS,
         },
     ],
     send(id, payload) {
