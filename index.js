@@ -26,7 +26,7 @@ createInterface({
     consoleHandler(cmd, args, child);
 });
 
-client.login(process.env.R0XAS_TOKEN);  // Change to RIKU_TOKEN
+client.login(process.env.R0XAS_TOKEN);  // Change to BOT_TOKEN
 
 client.once("ready", () => {
 
