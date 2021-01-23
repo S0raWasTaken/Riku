@@ -55,7 +55,7 @@ client.on("error", error => console.log(`[ERROR: ${dateNow()}] Discord client ca
 client.on("warn", warn => console.log(`[WARN: ${dateNow()}] Discord client caught a warn:\n`+warn));
 
 client.on("guildMemberAdd", member => {
-    memberAddHandler(member);
+    memberAddHandler(member, maps);
 });
 
 client.on("message", message => {
