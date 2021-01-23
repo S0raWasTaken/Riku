@@ -5,4 +5,5 @@ IF EXIST "%path%\.env" {
     node .
 } else {
     echo "No file .env found">%path%\errorLogs.txt
+    pause
 }
